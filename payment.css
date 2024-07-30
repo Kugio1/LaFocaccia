@@ -1,0 +1,214 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding: 2rem;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --main-color: #081b54; 
+    --second-color: #CB0000;
+    --tertiary-color: #49D8B9;
+}
+section{
+    padding: 50px 10%;
+}
+img{
+    width: 100%;
+}
+*::selection{
+    background-color: var(--main-color);
+    color: #fff;
+}
+/* end of brain */
+
+/* header */
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    transition: 0.2s;
+    color: #fff;
+    background: var(--second-color);
+}
+header.active{
+    background: var(--second-color);
+    box-shadow: 0 0 4px rgb(14 55 54 / 15%); 
+}
+header.active .logo{
+    color: #fff;
+}
+header.active .navbar a {
+    color: #fff;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--main-color)
+}
+.logo img{
+    width: 35px;
+    margin-right: 10px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.navbar a:hover{
+    color: #fff;
+    background: var(--main-color);
+    border-radius: 4px;
+}
+#altRight{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+/* end of header */
+
+/* payment */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(img/bround.png);
+    padding: 25px;
+}
+.container form{
+    width: 100%;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+}
+form .row{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.row .column{
+    flex: 1 1 250px;
+}
+.column .title{
+    font-size: 20px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.column .input-box{
+    margin: 15px 0;
+}
+.input-box span{
+    display: block;
+    margin-bottom: 10px;
+}
+.input-box input{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+.column .flex{
+    display: flex;
+    gap: 15px;
+}
+.flex .input-box{
+    margin-top: 5px;
+}
+.input-box img{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+form .btn{
+    width: 100%;
+    padding: 12px;
+    background: var(--main-color);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+form .btn:hover{
+    background: var(--tertiary-color);
+}
+/* end of payment */
+
+/* responsive */
+@media (max-width: 991px){
+    header{
+        padding: 18px 4%;
+    }
+    section {
+        padding: 50px 4%;
+    }
+}
+@media (max-width: 991px){
+    header{
+        padding: 11px 4%;
+    }
+    #altRight{
+        display: initial;
+        color: var(--main-color);
+    }
+    header.active #altRight{
+        color: #fff;
+    }
+    header .navbar{
+        position:absolute;
+        top: -500px;
+        right: 0;
+        left: 0%;
+        display: flex;
+        flex-direction: column;
+        background: var(--second-color);
+        box-shadow: 0 4px 4px rgb(14 55 54 / 15%);
+        transition: 0.2s ease;
+        text-align: right;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+        color: #fff;
+    }
+    .home-text h1{
+        font-size: 2.4rem;
+    }
+    .about h1{
+        font-size: 2rem;
+    }
+    .heading h2{
+        font-size: 1.6rem;
+    }
+    .contact-info h2{
+        font-size: 1.6rem;
+    }
+}

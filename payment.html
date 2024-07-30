@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+     <!-- CSS -->
+     <link rel="stylesheet" href="payment.css">
+     <!-- Favicon -->
+     <link rel="shortcut icon" href="img/favicon.png">
+     <!-- Box Icons -->
+     <link rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+ </head>
+ <body>
+    <!-- Navbar -->
+<header>
+    <a href="index.html" class="logo"><img src="img/logo.jpg" alt="">La Focaccia</a>
+    <i class='bx bx-menu-alt-right' id="altRight"></i>
+
+    <ul class="navbar">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#menu">Menu</a></li>
+        <li><a href="index.html#customers">Customers</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</header>
+
+<!-- Payment Section -->
+ <div class="container">
+    <form action="">
+        <div class="row">
+            <div class="column">
+                <h3 class="title">Billing Address</h3>
+                <div class="input-box">
+                    <span>Full Name</span>
+                    <input type="text" placeholder="Luke Johnson" autocomplete="name" id="name" required>
+                </div>
+                <div class="input-box">
+                    <span>Email</span>
+                    <input type="email" placeholder="example@example.com" autocomplete="email" id="email" required>
+                </div>
+                <div class="input-box">
+                    <span>Address</span>
+                    <input type="text" placeholder="123 Main Street" autocomplete="street-address" id="address" required>
+                </div>
+                <div class="input-box">
+                    <span>City</span>
+                    <input type="text" placeholder="London" autocomplete="address-level2" id="city" required>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Postcode</span>
+                            <input type="text" placeholder="SE1 9QU" autocomplete="postal-code" id="postcode" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3 class="title">Payment</h3>
+            <div class="input-box">
+                <span>Cards Accepted</span>
+                <img src="img/credit-cards.png" alt="">
+            </div>
+            <div class="input-box">
+                <span>Name On Card</span>
+                <input type="text" placeholder="Mr Luke Johnson" autocomplete="cc-name" id="ccName" required>
+            </div>
+            <div class="input-box">
+                <span>Credit Card Number</span>
+                <input type="number" placeholder="1111 2222 3333 4444" autocomplete="cc-number" id="ccNumber" required>
+            </div>
+            <div class="input-box">
+                <span>Expiry Month</span>
+                <input type="text" placeholder="February" autocomplete="cc-exp-month" id="expMonth" required>
+
+                <div class="flex">
+                    <div class="input-box">
+                        <span>Expiry Year</span>
+                        <input type="number" placeholder="2026" autocomplete="cc-exp-year" id="expYear" required>
+                </div>
+                <div class="input-box">
+                    <span>CVV</span>
+                    <input type="number" placeholder="123" autocomplete="cc-csc" id="ccCVV" required>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <button type="submit" class="btn">Submit</button>
+    </form>
+ </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
